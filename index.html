@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAB INDIA SERVICE | Premium Ertiga 6+1 Seater Taxi</title>
+    <style>
+        :root {
+            --primary: #ffc107;
+            --dark: #111111;
+            --light: #f8f9fa;
+            --text: #333333;
+            --success: #25d366;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text); background-color: var(--light); line-height: 1.6; }
+        
+        /* Header */
+        header { background: var(--dark); color: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); }
+        .nav-buttons a { background: var(--primary); color: var(--dark); padding: 8px 16px; text-decoration: none; font-weight: bold; border-radius: 4px; margin-left: 10px; transition: 0.3s; }
+        .nav-buttons a.call-btn { background: #007bff; color: white; }
+        .nav-buttons a:hover { opacity: 0.9; }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://unsplash.com') no-repeat center center/cover; padding: 80px 5% 60px; color: white; text-align: center; }
+        .hero h1 { font-size: 42px; margin-bottom: 15px; color: var(--primary); }
+        .hero p { font-size: 18px; max-width: 600px; margin: 0 auto 30px; }
+        .cta-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn { padding: 12px 28px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 5px; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .btn-whatsapp { background: var(--success); color: white; }
+        .btn-call { background: var(--primary); color: var(--dark); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+        /* Section Global */
+        section { padding: 50px 5%; }
+        h2 { text-align: center; font-size: 28px; margin-bottom: 30px; position: relative; }
+        h2::after { content: ''; display: block; width: 60px; height: 3px; background: var(--primary); margin: 10px auto 0; }
+
+        /* Fleet Highlights */
+        .fleet-box { background: white; border-radius: 8px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; max-width: 700px; margin: 0 auto; border-top: 4px solid var(--primary); }
+        .fleet-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; margin-top: 20px; }
+        .feature { background: var(--light); padding: 10px; border-radius: 5px; font-weight: 500; }
+
+        /* Quick Calculator */
+        .calc-container { max-width: 500px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group select, .form-group input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; }
+        .calc-btn { width: 100%; background: var(--dark); color: white; padding: 12px; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .calc-btn:hover { background: #222; }
+        #fare-result { margin-top: 20px; text-align: center; font-size: 18px; font-weight: bold; color: #d9534f; display: none; background: #fff3cd; padding: 15px; border-radius: 5px; border: 1px solid #ffeeba; }
+
+        /* Footer */
+        footer { background: var(--dark); color: #aaa; text-align: center; padding: 20px; font-size: 14px; border-top: 3px solid var(--primary); }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            header { flex-direction: column; gap: 10px; text-align: center; }
+            .hero h1 { font-size: 30px; }
+            .hero p { font-size: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">CAB INDIA SERVICE</div>
+        <div class="nav-buttons">
+            <a href="tel:+919738966389" class="call-btn">📞 Call Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Premium 6+1 Seater Ertiga Cab Service</h1>
+        <p>Spacious, clean, and fully air-conditioned Ertiga cars. Perfect for family trips, outstation travel, and airport transfers.</p>
+        <div class="cta-group">
+            <a href="https://wa.me." class="btn btn-whatsapp" target="_blank">💬 Book via WhatsApp</a>
+            <a href="tel:+919738966389" class="btn btn-call">📞 Call 9738966389</a>
+        </div>
+    </section>
+
+    <!-- Fleet Info -->
+    <section id="fleet">
+        <h2>Our Fleet Features</h2>
+        <div class="fleet-box">
+            <h3>Maruti Suzuki Ertiga (4 Vehicles Available)</h3>
+            <p style="margin-top: 10px; color: #666;">We maintain a fleet of 4 identical, top-condition Ertiga cars to ensure reliable and on-time service for groups.</p>
+            <div class="fleet-features">
+                <div class="feature">💺 6+1 Seating</div>
+                <div class="feature">❄️ Dual AC</div>
+                <div class="feature">🧳 Large Boot Space</div>
+                <div class="feature">🛡️ Safe Drivers</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fare Estimator -->
+    <section id="calculator" style="background-color: #eee;">
+        <h2>Estimated Fare Calculator</h2>
+        <div class="calc-container">
+            <div class="form-group">
+                <label for="trip-type">Trip Type</label>
+                <select id="trip-type" onchange="toggleInputs()">
+                    <option value="outstation">Family Outstation Trip (Per Km)</option>
+                    <option value="airport">Airport Fixed Drop/Pick</option>
+                    <option value="local">Local Rental (8 Hrs / 80 Km)</option>
+                </select>
+            </div>
+            
+            <div id="outstation-fields">
+                <div class="form-group">
+                    <label for="distance">Estimated Distance (in Km)</label>
+                    <input type="number" id="distance" placeholder="Enter total round-trip km">
+                </div>
+                <div class="form-group">
+                    <label for="days">Number of Days</label>
+                    <input type="number" id="days" value="1" min="1">
+                </div>
+            </div>
+
+            <button class="calc-btn" onclick="calculateFare()">Calculate Approximate Fare</button>
+            <div id="fare-result"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 CAB INDIA SERVICE. All Rights Reserved.</p>
+        <p style="margin-top: 5px; font-size: 12px;">Contact: +91 9738966389</p>
+    </footer>
+
+    <script>
+        function toggleInputs() {
+            const tripType = document.getElementById('trip-type').value;
+            const outstationFields = document.getElementById('outstation-fields');
+            if (tripType === 'outstation') {
+                outstationFields.style.display = 'block';
+            } else {
+                outstationFields.style.display = 'none';
+            }
+        }
+
+        function calculateFare() {
+            const tripType = document.getElementById('trip-type').value;
+            const resultDiv = document.getElementById('fare-result');
+            
+            if (tripType === 'outstation') {
+                const distance = document.getElementById('distance').value;
+                const days = document.getElementById('days').value;
+                
+                if (!distance || distance <= 0) {
+                    alert('Please enter a valid distance.');
+                    return;
+                }
+                if (!days || days <= 0) {
+                    alert('Please enter valid number of days.');
+                    return;
+                }
+                
+                const ratePerKm = 18.5;
+                const driverBetaPerDay = 300; // Fixed Driver allowance per day
+                
+                let runningFare = distance * ratePerKm;
+                let totalDriverBeta = days * driverBetaPerDay;
+                let totalFare = Math.round(runningFare + totalDriverBeta);
+                
+                resultDiv.innerHTML = `
+                    <div style="margin-bottom: 8px;"><strong>Total Estimated Fare: ₹${totalFare}</strong></div>
+                    <div style="font-size: 14px; color: #555; font-weight: normal;">
+                        Distance Fare: ₹${Math.round(runningFare)} (@ ₹${ratePerKm}/km)<br>
+                        Driver Allowance: ₹${totalDriverBeta} (₹${driverBetaPerDay} x ${days} Days)
+                    </div>
+                `;
+            } else if (tripType === 'airport') {
+                let fare = 1500; 
+                resultDiv.innerHTML = "<strong>Estimated Fare: ₹" + fare + " (Flat Rate)</strong>";
+            } else if (tripType === 'local') {
+                let fare = 2500; 
+                resultDiv.innerHTML = "<strong>Estimated Package Fare: ₹" + fare + "</strong>";
+            }
+            resultDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
